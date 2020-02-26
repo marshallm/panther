@@ -142,7 +142,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|mjs|jsx|ts|tsx)$/,
-        exclude: /node_modules/,
+        exclude: /node_modules\/(?!(panther)).*/,
         loader: require.resolve('babel-loader'),
         options: {
           ...babelConfig,
